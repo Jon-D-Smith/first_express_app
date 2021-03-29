@@ -8,9 +8,18 @@ const port = 3000;
 // })
 
 app.get('/', (req, res) => {
-    res.send("Hello World!")
+    res.send("Hello SuperPowereds world!")
 })
 
+app.get('/api/year1/students/', (req, res) => {
+    res.send({
+        students:
+        {
+            nick: { name: "Nick Campbell", age: 18, height: "5'10\"", power: "luck" },
+            vince: { name: "Vince Reynolds", age: 18, height: "5'8\"", power: "energy absorption" }
+        },
+    })
+})
 
 app.listen(port, () => {
     console.log("LISTENING ON PORT: ", port);
