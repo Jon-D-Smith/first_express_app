@@ -21,6 +21,12 @@ app.get('/api/year1/students/', (req, res) => {
     })
 })
 
+
+app.get('/search', (req, res) => {
+    const { q } = req.query;
+    res.send(`<h1>Search results for: ${q}</h1>`)
+})
+
 app.listen(port, () => {
     console.log("LISTENING ON PORT: ", port);
 })
